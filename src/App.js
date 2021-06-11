@@ -1,13 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
-import Section from './components/Section';
+import Home from './components/Home';
 
 function App() {
   return (
     <div className="App">
       <Header/>
-      <Section backgroundImg={'SXM8_pad39a_fss_Desktop_3.webp'}/>
+      <Home/>
     </div>
   );
 }

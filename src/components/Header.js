@@ -6,7 +6,7 @@ export default function Header() {
     return (
         <Container>
             <a>
-                <img src="/images/spacex.jpeg" alt=""/>
+                <img src="/images/spacex-01.png" alt=""/>
             </a>
 
             <Menu>
@@ -28,12 +28,12 @@ export default function Header() {
 }
 
 const Container = styled.div`
-    min-height: 60px;
+    min-height: 90px;
     position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 110px;
     top: 0;
     left: 0;
     right: 0;
@@ -42,7 +42,7 @@ const Container = styled.div`
     a {
         img {
             width: 200px;
-            height: 90px;
+            height: auto;
         }
     }
 `
@@ -52,6 +52,7 @@ const Menu = styled.div`
     align-items: center;
     justify-content: center;
     flex: 1;
+    margin-right: 300px;
 
     a {
         font-weight: 1000;
@@ -65,16 +66,20 @@ const Menu = styled.div`
 const RightMenu = styled.div`
     display: flex;
     align-items: center;
-
+    margin-left: 10px;
+    
     a {
         font-weight: 1000;
         font-size: 14px;
         text-transform: uppercase;
-        margin-right: 10px;
+        margin-right: 20px;
+        
     }
 
 `
 
 const CustomMenu = styled(MenuIcon)`
     cursor: pointer;
+    
+    
 `
