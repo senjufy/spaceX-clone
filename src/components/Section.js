@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade'
 
 export default function Section(
     {
@@ -13,35 +14,40 @@ export default function Section(
     return (
         <Wrap bgImage={backgroundImg}>
             {description ?
-                <div>
-                    <ItemTextSec>
-                        <h3>{caption}</h3>
-                        <h1>{title}</h1>
-                        <p>{description}</p>
-                    </ItemTextSec>
+                    <div>
+                        <Fade bottom>
+                            <ItemTextSec>
+                                <h3>{caption}</h3>
+                                <h1>{title}</h1>
+                                <p>{description}</p>
+                            </ItemTextSec>
 
-                    <GroupNew>
-                        <ButtonNew>
-                            <a>{btnText}</a>
-                        </ButtonNew>
-                    </GroupNew>
-                </div>
+                            <GroupNew>
+                                <ButtonNew>
+                                    <a>{btnText}</a>
+                                </ButtonNew>
+                            </GroupNew>
+                        </Fade>
+                    </div>
             :   
-                <div>
-                    <ItemText>
-                        <h3>{caption}</h3>
-                        <h1>{title}</h1>
-                    </ItemText>
+                    <div>
+                        <Fade bottom>
+                            <ItemText>
+                                <h3>{caption}</h3>
+                                <h1>{title}</h1>
+                            </ItemText>
 
-                    <Group>
-                        <Button>
-                            <a>{btnText}</a>
-                        </Button>
-                        {title === "SXM-8 Mission" &&
-                            <DownArrow src="/images/down-arrow.svg"/>
-                        }
-                    </Group>    
-                </div>
+                            <Group>
+                                <Button>
+                                    <a>{btnText}</a>
+                                </Button>
+                                {title === "SXM-8 Mission" &&
+                                    <DownArrow src="/images/down-arrow.svg"/>
+                                }
+                            </Group>  
+                        </Fade>  
+                    </div>
+               
             }
             
         </Wrap>
@@ -98,10 +104,24 @@ const Button = styled.div`
     padding: 15px 49px;
     cursor: pointer;
 
+    background-image: linear-gradient(transparent, transparent 50%, white 50%, white);
+    background-size: 100% 200%;
+    -webkit-transition: background-position .3s;
+    transition: background-position .3s;
+    
+
     a {
         font-weight: 1000;
         font-size: 13px;
         text-transform: uppercase;
+    }
+
+    :hover {
+        background-position: 0 -100%;
+
+        a {
+            color: black;
+        }
     }
     
 `
@@ -148,12 +168,24 @@ const ButtonNew = styled.div`
     padding: 15px 49px;
     cursor: pointer;
 
+    background-image: linear-gradient(transparent, transparent 50%, white 50%, white);
+    background-size: 100% 200%;
+    -webkit-transition: background-position .3s;
+    transition: background-position .3s;
+
     a {
         font-weight: 1000;
         font-size: 13px;
         text-transform: uppercase;
     }
     
+    :hover {
+        background-position: 0 -100%;
+
+        a {
+            color: black;
+        }
+    }
 `
 
 const DownArrow = styled.img`
