@@ -1,0 +1,91 @@
+.container {
+    min-height: 90px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 110px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.container a img {
+    width: 200px;
+    height: auto;
+}
+
+
+.container__black {
+    background-color: #111;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin-right: 300px;
+}
+
+.menu a {
+    font-weight: 1000;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    flex-wrap: nowrap;
+}
+
+.rightMenu {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.rightMenu a {
+    font-weight: 1000;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+
+.burgerNav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: black;
+    width: 350px;
+    z-index: 16;
+    list-style: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+
+.burgerShow {
+    transform: translateX(0) translateX(100%);
+    transition: transform 0.2s;
+}
+
+.burgerNav li {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255,255,255, 0.3);
+    margin-right: 40px;
+}
+
+.burgerNav a {
+    font-weight: 600px;
+}
+
+.closeWrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close {
+    cursor: pointer;
+    margin-right: 40px;
+}
