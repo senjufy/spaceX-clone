@@ -25,16 +25,16 @@ function Header() {
             </a>
 
             <div className="menu">
-                <a href="#">Falcon 9</a>
-                <a href="#">Falcon Heavy</a>
-                <a href="#">Dragon</a>
-                <a href="#">Starhip</a>
-                <a href="#">Human Spacelight</a>
-                <a href="#">Rideshare</a>
+                <a className="tag" href="#">Falcon 9</a>
+                <a className="tag" href="#">Falcon Heavy</a>
+                <a className="tag" href="#">Dragon</a>
+                <a className="tag" href="#">Starhip</a>
+                <a className="tag" href="#">Human Spacelight</a>
+                <a className="tag" href="#">Rideshare</a>
             </div>
 
             <div className="rightMenu">
-                <a href="#">Shop</a>
+                <a className="tag" href="#">Shop</a>
                 <MenuIcon onClick={() => setBurgerStatus(false)}/>
             </div>
             
